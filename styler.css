@@ -1,0 +1,23 @@
+body
+{
+ background-color:rgb(127, 197, 230);
+
+}
+/* Create four equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    height: 300px; /* Should be removed. Only for demonstration */
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  nav{
+
+    background-color: brown;
+  }
