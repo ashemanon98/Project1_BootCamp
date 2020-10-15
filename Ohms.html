@@ -20,12 +20,32 @@
               <a href="faradayLaw.html">Faraday's Law</a>
               <a href="MutalInductace.html">Mutual Inductance</a>
               <a href="selfInductance.html">Self Inductance</a>
-              <p>click any of the topics to learn!</p>
+              
             </div>
         </div>
         <a class="navigation" href="contact.html">Contact</a>
       
 
 </nav>
+<fieldset>
+  <legend>finding voltage using ohms law</legend>
+  Eneter Current:<input id="current" type="number"/>
+  Eneter Resistance:<input id="resistance" type="number"/>
+  Voltage is:<output type="number" id="volt"/></br>
+  <button onclick="volts()">Calculate</button>
+</fieldset>
+
+
+
+
+<script>
+    function volts() {
+      let current=document.getElementById("current").value;
+      let resistance=document.getElementById("resistance").value;
+      voltage=current*resistance;
+      document.getElementById("volt").value=voltage;
+      
+    }
+    </script
 </body>
 </html>
