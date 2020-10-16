@@ -17,6 +17,7 @@ body
     display: table;
     clear: both;
   }
+  /*theis is the navigatiion specification*/
   nav{
 
     background-color: brown;
@@ -24,9 +25,13 @@ body
   }
   .navigation {
     width: 200px;
-    height: 100px;
-    padding: 150px;
+    height: 10px;
+    padding: 10px;
     
+  }
+  label{
+      background-color: grey;
+      color: greenyellow !important;
   }
   .dropbtn {
     background-color: brown;

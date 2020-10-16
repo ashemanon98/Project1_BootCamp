@@ -24,14 +24,54 @@
             </div>
         </div>
         <a class="navigation" href="contact.html">Contact</a>
+        <a class="navigation" href="survey.html">survey</a>   
       
 
 </nav>
+
+<p>
+
+    Ohm's law states that the current through a conductor between two points is
+     directly proportional to the voltage across the two points. Introducing the
+      constant of proportionality, the resistance, one arrives at the usual
+       mathematical equation that describes this relationship.</br>
+       <div style="padding-left:150px; font-size: 30px;">  V=IR</div>
+
+</p>
+<p>
+
+    he law was named after the German physicist Georg Ohm, who, in a treatise
+     published in 1827, described measurements of applied voltage and current
+      through simple electrical circuits containing various lengths of wire.
+       Ohm explained his experimental results by a slightly more complex equation
+        than the modern form above.
+</p>
+<p>
+    In physics, the term Ohm's law is also used to refer to various generalizations
+     of the law; for example the vector form of the law used in electromagnetics and material science:
+
+      <br> <div style="padding-left:150px; font-size: 30px;">J=&sigma;E</div>                 </br>
+   where J is the current density at a given location in a resistive material, E is the electric field 
+   at that location, and σ (sigma) is a material-dependent parameter called the conductivity. This
+    reformulation of Ohm's law is due to Gustav Kirchhoff.[4]
+
+
+</p>
+<p>
+    <h3>Scope</h3>
+    Ohm's law is an empirical law, a generalization from many experiments that have shown that current 
+    is approximately proportional to electric field for most materials. It is less fundamental than Maxwell's
+    equations and is not always obeyed. Any given material will break down under a strong-enough electric field,
+    and some materials of interest in electrical engineering are "non-ohmic" under weak fields.
+    Ohm's law has been observed on a wide range of length scales. In the early 20th century, it was thought that Ohm's 
+    law would fail at the atomic scale, but experiments have not borne out this expectation. As of 2012, researchers
+     have demonstrated that Ohm's law works for silicon wires as small as four atoms wide and one atom high.
+</p>
 <fieldset>
   <legend>finding voltage using ohms law</legend>
   Eneter Current:<input id="current" type="number"/>
   Eneter Resistance:<input id="resistance" type="number"/>
-  Voltage is:<output type="number" id="volt"/></br>
+  Voltage is:<label  id="volt">you will see result here</label></br>
   <button onclick="volts()">Calculate</button>
 </fieldset>
 
@@ -43,7 +83,7 @@
       let current=document.getElementById("current").value;
       let resistance=document.getElementById("resistance").value;
       voltage=current*resistance;
-      document.getElementById("volt").value=voltage;
+      document.getElementById("volt").innerHTML=voltage;
       
     }
     </script
