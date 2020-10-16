@@ -29,5 +29,45 @@
 
 </nav>
 
+<p>
+
+    Coulomb's law, or Coulomb's inverse-square law, is an experimental law of physics
+    that quantifies the amount of force between two stationary, electrically charged
+    particles. The electric force between charged bodies at rest is conventionally called
+    electrostatic force or Coulomb force. The quantity of electrostatic force between
+    stationary charges is always described by Coulomb's law. The law was first discovered
+    in, by French physicist Charles-Augustin de Coulomb, hence the name. Coulomb's law
+    was essential to the development of the theory of electromagnetism, maybe even its 
+    starting point,[1] as it made it possible to discuss the quantity of electric charge
+    in a meaningful way.</br>
+
+      <div style="padding-left:150px; font-size: 30px;">F= K*Q1*Q2/(r^2)</div> 
+
+</p>
+<fieldset>
+    <legend>finding force using coulombs law</legend>
+    Eneter charge 1 in coulomb:<input id="one" type="number" required />
+    Eneter charge 2 in coulomb:<input id="two" type="number"  required/>
+    Eneter distnce between in meters :<input id="r" type="number"  required/>
+    Force is:<label  id="force">you will see result here</label></br>
+    <button onclick="force()">Calculate</button>
+  </fieldset>
+  
+  
+  
+  
+  <script>
+      function force() {
+        let q1=document.getElementById("one").value;
+        let q2=document.getElementById("two").value;
+        let r=document.getElementById("r").value;
+        if (r==0  ){alert(" check your input values for distance cannot be zer0");}
+        f=(9000000000)*q1*q2/(r*r);
+        
+        document.getElementById("force").innerHTML=f;
+        
+      }
+      </script
+
 </body>
 </html>

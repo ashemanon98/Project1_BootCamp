@@ -30,5 +30,30 @@
 </nav>
 
 
+<fieldset>
+    <legend>finding induced volt using Faraday's law</legend>
+    Eneter change  in magnetic flux :<input id="one" type="number" required />
+    Eneter change in time in seconds:<input id="two" type="number"  required/>
+    Eneter Number of turns :<input id="n" type="number"  required/>
+    Voltage induced in volts is:<label  id="volt">you will see result here</label></br>
+    <button onclick="volts()">Calculate</button>
+  </fieldset>
+  
+  
+  
+  
+  <script>
+      function volts() {
+        let deltaPhi=document.getElementById("one").value;
+        let deltaTime=document.getElementById("two").value;
+        let turns=document.getElementById("n").value;
+        if (deltaTime==0  ){alert(" check your input values for time cannot be zero");}
+        v=turns*deltaPhi/deltaTime;
+        
+        document.getElementById("volt").innerHTML=v;
+        
+      }
+      </script
+
 </body>
 </html>
