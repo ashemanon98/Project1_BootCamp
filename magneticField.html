@@ -35,14 +35,46 @@
     Indeed, when Oersted discovered in 1820 that a current in a wire affected a
     compass needle, he was not dealing with extremely large currents. How does the
     shape of wires carrying current affect the shape of the magnetic field created? 
-    We noted in Chapter 28 that a current loop created a magnetic field similar to 
+    it is known that  a current loop created a magnetic field similar to 
     that of a bar magnet, but what about a straight wire? We can use the Biot-Savart 
     law to answer all of these questions, including determining the magnetic field of 
     a long straight wire.
+    The magnetic field lines of the infinite wire are circular and centered at the wire
+     (as in Figure)), and they are identical in every plane perpendicular to the wire. 
+     Since the field decreases with distance from the wire, the spacing of the field lines 
+     must increase correspondingly with distance. The direction of this magnetic field may 
+     be found with a second form of the right-hand rule (illustrated in (Figure)). If you 
+     hold the wire with your right hand so that your thumb points along the current, then your 
+     fingers wrap around the wire in the same sense as B.
+     Some magnetic field lines of an infinite wire. The direction of B can be 
+     found with a form of the right-hand rule. and the magnitude can be found using the following formula</br>
+     <div style="padding-left:150px; font-size: 30px;">B= &mu;&times;I/2&times&pi;&timesR</div>
+   </p>
 
 
 </p>
-
+<img src="rightHandRule.PNG"/>
+<fieldset>
+    <legend>How to calculate magnetic field around infinit straight wire</legend>
+    Eneter Current:<input id="current" type="number" required/>
+    Eneter Distance from the wire:<input id="distance" type="number" required/>
+    Magnetic Field is:<label  id="Magenet">you will see result here</label></br>
+    <button onclick="field()">Calculate</button>
+  </fieldset>
+  
+  
+  
+  
+  <script>
+      function field() {
+        let current=document.getElementById("current").value;
+        let distance_from_wire=document.getElementById("distance").value;
+        if (distance_from_wire==0){alert("distance from wire cannot be zero");}
+        Magenetic_field=(4*Math.PI*Math.pow(10,-7)*current)/(2*Math.PI*distance_from_wire);
+        document.getElementById("Magenet").innerHTML=Magenetic_field;
+        
+      }
+      </script
 
 
 </body>
