@@ -27,8 +27,55 @@
         <a class="navigation" href="survey.html">survey</a>   
 
 </nav>
-   
+   <p>
+       <h2>My research to calculate how much a heater converts electricity to heat</h2>
+       I have always been impressed by the fact that how much energy is converted to heat
+       fom electric supply. This is useful for knowing how much electricity is used to heat 
+       a house or furnace. you can use the following formula to generate the energy conversion 
+       ratio of the device you built or designed by the following method.
+       <ol>
+           <li>build the heat generating machine</li>
+           <li>start the timer and heat any substace with know specific heat capacity and mass to a until a certain temparture temprature  </li>
+           <li>As soon as the tempure hits you some useful number stop the timer and electricty </li>
+           <li>calculate the ratio of heat to electricity by the following expression</br> 
+            ratio=(mass*specificHeatCapacity*change_of_temperature)/(volt*current*time)</li>
+            <li>Multiply the ratio by 100 and this give the percent ratio</li>
+       </ol>
+   </p>
+<fieldset>
+    <legend>finding the ratio of elcriciyt converted to heatmin percent</legend>
+    Eneter mass of the substance being heated in joules:></br><input id="one" type="number" required /></br>
+    Eneter the specific heat capacity of the substance in standard SI UNIT:</br><input id="two" type="number"  required/></br>
+    Eneter by how much the substance heat is raised:></br><input id="h" type="number"  required/></br>
 
+    Eneter  how much votage was supplied :</br><input id="v" type="number"  required/></br>
+    Eneter  how much current was passing:</br><input id="i" type="number"  required/></br>
+    Eneter  how much time elapsed:</br><input id="t" type="number"  required/></br>
+
+    the perecentage of heat to electircity is:<label  id="percent">you will see result here</label>%</br>
+    <button onclick="heat()">Calculate</button>
+  </fieldset>
+  
+  
+  
+  
+  <script>
+      function heat() {
+        let mass=document.getElementById("one").value;
+        let specificheat=document.getElementById("two").value;
+        let temperature=document.getElementById("h").value;
+        let voltage=document.getElementById("v").value;
+        let current=document.getElementById("i").value;
+        let time=document.getElementById("t").value;
+        
+        if (voltage==0 || current==0 || time==0 ){alert(" check your input values for time or voltage or current cannot be zero");}
+        ratio=(mass*specificheat*temperature)/(voltage*current*time);
+        percent=ratio*100;
+        
+        document.getElementById("percent").innerHTML=percent;
+        
+      }
+      </script
 
 
 </body>

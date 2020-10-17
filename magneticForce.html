@@ -27,5 +27,51 @@
         <a class="navigation" href="survey.html">survey</a>   
 
 </nav>
+
+
+<p>
+
+    a current loop created a magnetic field similar to 
+    that of a bar magnet, but what about a straight wire? We can use the Biot-Savart 
+    law to answer all of these questions, including determining the magnetic field of 
+    a long straight wire.
+
+
+</p>
+
+
+
+<fieldset>
+    <legend>How to calculate the  force genrated by a wire in a magnetic field B</legend>
+    Eneter the magnetic field strength in Tesla:</br><input id="one" type="number" required /></br>
+    Enter the lenght of wire in Meter:</br><input id="two" type="number"  required/></br>
+    Enter the amount of current inside the wire:</br><input id="current" type="number"  required/></br>
+
+    Enter the angle between the wire and the direction of magnetic field in radians :</br><input id="theta" type="number"  required/></br>
+    
+
+    The force in Newtons experienced by the wire is:<label  id="force">you will see result here</label></br>
+    <button onclick="force()">Calculate</button>
+  </fieldset>
+  
+  
+  
+  
+  <script>
+      function force() {
+        let magnetic_field=document.getElementById("one").value;
+        let length_of_wire=document.getElementById("two").value;
+        let current=document.getElementById("current").value;
+        let angle=document.getElementById("theta").value;
+        force_on_wire=magnetic_field*current*length_of_wire*Math.sin(angle);
+        
+        console.log(force_on_wire);
+        
+        
+        
+        document.getElementById("force").innerHTML=force_on_wire;
+        
+      }
+      </script
 </body>
 </html>
